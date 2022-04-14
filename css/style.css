@@ -66,6 +66,8 @@ body    {
 }
 
 .carta  {
+    cursor: pointer;
+
     height: 250px;
 
     margin: 20px auto;
@@ -93,4 +95,12 @@ img {
     position: absolute;
 
     width: 200px;
+}
+
+.virarCarta .back-face {
+    transform: rotateY(0deg);
+}
+
+.virarCarta .front-face {
+    transform: rotateY(-180deg);
 }

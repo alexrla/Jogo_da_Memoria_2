@@ -1,4 +1,8 @@
 let quantidadeDeCartas;
+let pontuacao= document.querySelector(".pontos");
+let pontos = 0;
+
+pontuacao.innerHTML = pontos;
 
 const cartas = [
     {
@@ -10,25 +14,25 @@ const cartas = [
     {
         nome: "Android17",
         id: 2,
-        img: "Android16.jpg"
+        img: "Android17.jpg"
     },
 
     {
         nome: "Android18",
         id: 3,
-        img: "Android16.jpg"
+        img: "Android18.jpg"
     },
 
     {
         nome: "Android19",
         id: 4,
-        img: "Android16.jpg"
+        img: "Android19.jpg"
     },
 
     {
         nome: "Android20",
         id: 5,
-        img: "Android16.jpg"
+        img: "Android20.jpg"
     },
 
     {
@@ -47,7 +51,7 @@ const cartas = [
     {
         nome: "Bulma2",
         id: 8,
-        img: "Bulma.jpg"
+        img: "Bulma2.jpg"
     },
 
     {
@@ -263,6 +267,8 @@ const cartas = [
 
 
 let cartasSelecionadas = [];
+let cartasClicadas = [];
+let titleCartasClicadas = [];
 
 function perguntarQuantidadeDeCartas()   {
     while(true) {
@@ -318,23 +324,51 @@ function renderizarQuadroDeCartas() {
     let quadroDeCartas = document.querySelector(".cartas");
 
     for(let i = 0; i < cartasSelecionadas.length; i++)  {
-        console.log(cartasSelecionadas[i].nome);
-        console.log(cartasSelecionadas[i].img);
 
         let carta = `
-                        <li class="carta">
+                        <li title="${cartasSelecionadas[i].nome}"  class="carta" onclick="exibirCarta(this)">
                             <div class="front-face face">
                                 <img src="img/DragonBall.jpg">
                             </div>
 
                             <div class="back-face face">
-                                <img  title="${cartasSelecionadas[i].nome}" src="img/${cartasSelecionadas[i].img}">
+                                <img  src="img/${cartasSelecionadas[i].img}">
                             </div>
                         </li>
                     `;
         
         quadroDeCartas.innerHTML += carta;
     }
+}
+
+function exibirCarta(carta)  {
+    carta.removeAttribute("onclick");
+
+    carta.classList.toggle("virarCarta");
+    cartasClicadas.push(carta);
+    titleCartasClicadas.push(carta.title);
+
+    setTimeout(() => {
+        if(cartasClicadas.length == 2)  {
+            let cartaUm = cartasClicadas[0], cartaDois = cartasClicadas[1];
+            let cartaUmTitle = titleCartasClicadas[0], cartaDoisTitle = titleCartasClicadas[1];
+    
+            if(cartaUmTitle == cartaDoisTitle)    {
+                pontos++;
+                pontuacao.innerHTML = pontos;
+            }
+            else    {
+                cartaUm.classList.toggle("virarCarta");
+                cartaUm.setAttribute("onclick", "exibirCarta(this)");
+
+                cartaDois.classList.toggle("virarCarta");
+                cartaDois.setAttribute("onclick", "exibirCarta(this)");
+            }
+
+            cartasClicadas = [];
+            titleCartasClicadas = [];
+        }
+    }, 1500);
 }
 
 perguntarQuantidadeDeCartas();
