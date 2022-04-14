@@ -52,3 +52,45 @@ body    {
 
     width: 60px;
 }
+
+.quadro__cartas .cartas {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    /* justify-content: space-between; */
+
+    margin: 30px auto;
+
+    width: 500px;
+}
+
+.carta  {
+    height: 250px;
+
+    margin: 20px auto;
+
+    position: relative;
+
+    width: 200px;
+}
+
+.face   {
+    backface-visibility: hidden;
+
+    transition: all .7s;
+
+    transform-style: preserve-3d;
+}
+
+.back-face  {
+    transform: rotateY(180deg);
+}
+
+img {
+    height: 250px;
+
+    position: absolute;
+
+    width: 200px;
+}
