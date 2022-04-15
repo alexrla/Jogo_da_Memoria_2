@@ -1,6 +1,10 @@
 let quantidadeDeCartas;
+let quadroDeCartas = document.querySelector(".cartas");
 let pontuacao= document.querySelector(".pontos");
 let pontos = 0;
+let jogadas = 0;
+let segundo = 0;
+let time;
 
 pontuacao.innerHTML = pontos;
 
@@ -14,7 +18,7 @@ const cartas = [
     {
         nome: "Android17",
         id: 2,
-        img: "Android17.jpg"
+        img: "Android17.png"
     },
 
     {
@@ -265,7 +269,6 @@ const cartas = [
     }
 ];
 
-
 let cartasSelecionadas = [];
 let cartasClicadas = [];
 let titleCartasClicadas = [];
@@ -301,6 +304,8 @@ function perguntarQuantidadeDeCartas()   {
             break;
         }
     }
+
+    gerarQuadroDeCartas();
 }
 
 function gerarQuadroDeCartas()  {
@@ -321,8 +326,6 @@ function gerarQuadroDeCartas()  {
 }
 
 function renderizarQuadroDeCartas() {
-    let quadroDeCartas = document.querySelector(".cartas");
-
     for(let i = 0; i < cartasSelecionadas.length; i++)  {
 
         let carta = `
@@ -343,10 +346,13 @@ function renderizarQuadroDeCartas() {
 
 function exibirCarta(carta)  {
     carta.removeAttribute("onclick");
+    jogadas++;
 
     carta.classList.toggle("virarCarta");
     cartasClicadas.push(carta);
     titleCartasClicadas.push(carta.title);
+
+    // if(jogadas > 0) timer();
 
     setTimeout(() => {
         if(cartasClicadas.length == 2)  {
@@ -367,9 +373,38 @@ function exibirCarta(carta)  {
 
             cartasClicadas = [];
             titleCartasClicadas = [];
+
+            verificarFimDeJogo();
         }
     }, 1500);
 }
 
+function resetarJogo()  {
+    quadroDeCartas.innerHTML = "";
+    pontuacao.innerHTML = 0;
+    pontos = 0;
+    cartasSelecionadas = [];
+    cartasClicadas = [];
+    titleCartasClicadas = []
+    perguntarQuantidadeDeCartas()
+    // window.location.reload();
+}
+
+function verificarFimDeJogo()   {
+    if(pontos == quantidadeDeCartas / 2)    {
+        // clearInterval(time);
+
+        alert(`Parabéns! Você ganhou com ${jogadas} jogadas.`);
+
+        jogadas = 0;
+    }
+}
+
+// function timer()    {
+//     time = setInterval(function () {
+//         segundo++;
+//         document.querySelector(".segundo").innerHTML = segundo;
+//     }, 1000);
+// }
+
 perguntarQuantidadeDeCartas();
-gerarQuadroDeCartas();
