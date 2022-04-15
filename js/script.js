@@ -364,14 +364,14 @@ function renderizarQuadroDeCartas() {
 }
 
 function exibirCarta(carta)  {
+    if(jogadas === 0) timer();
     carta.removeAttribute("onclick");
-    jogadas++;
 
     carta.classList.toggle("virarCarta");
     cartasClicadas.push(carta);
     titleCartasClicadas.push(carta.title);
 
-    // if(jogadas > 0) timer();
+    jogadas++;
 
     setTimeout(() => {
         if(cartasClicadas.length === 2)  {
@@ -405,25 +405,27 @@ function resetarJogo()  {
     cartasSelecionadas = [];
     cartasClicadas = [];
     titleCartasClicadas = []
+    segundo = 0;
+    document.querySelector(".segundo").innerHTML = 0;
     perguntarQuantidadeDeCartas()
     // window.location.reload();
 }
 
 function verificarFimDeJogo()   {
     if(pontos === quantidadeDeCartas / 2)    {
-        // clearInterval(time);
-
+        clearInterval(time);
+        
         alert(`Parabéns! Você ganhou com ${jogadas} jogadas.`);
 
         jogadas = 0;
     }
 }
 
-// function timer()    {
-//     time = setInterval(function () {
-//         segundo++;
-//         document.querySelector(".segundo").innerHTML = segundo;
-//     }, 1000);
-// }
+function timer()    {
+    time = setInterval(function () {
+        segundo++;
+        document.querySelector(".segundo").innerHTML = segundo;
+    }, 1000);
+}
 
 perguntarQuantidadeDeCartas();
