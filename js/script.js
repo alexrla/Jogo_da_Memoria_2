@@ -277,7 +277,6 @@ let titleCartasClicadas = [];
 function perguntarQuantidadeDeCartas()   {
     while(true) {
         quantidadeDeCartas = parseInt(prompt("Informe a quantidade de cartas que deseja jogar (o número deve ser um valor par e estar dentro do intervalo - [4, 14]):"));
-        // quantidadeDeCartas = parseInt(4);
 
         if(isNaN(quantidadeDeCartas))   {
             alert("O valor informado não é um número.");
