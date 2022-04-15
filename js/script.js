@@ -1,6 +1,7 @@
 let quantidadeDeCartas;
 let quadroDeCartas = document.querySelector(".cartas");
-let pontuacao= document.querySelector(".pontos");
+let pontuacao = document.querySelector(".pontos");
+
 let pontos = 0;
 let jogadas = 0;
 let segundo = 0;
@@ -275,8 +276,8 @@ let titleCartasClicadas = [];
 
 function perguntarQuantidadeDeCartas()   {
     while(true) {
-        // quantidadeDeCartas = parseInt(prompt("Informe a quantidade de cartas que deseja jogar (o número deve ser um valor par e estar dentro do intervalo - [4, 14]):"));
-        quantidadeDeCartas = parseInt(4);
+        quantidadeDeCartas = parseInt(prompt("Informe a quantidade de cartas que deseja jogar (o número deve ser um valor par e estar dentro do intervalo - [4, 14]):"));
+        // quantidadeDeCartas = parseInt(4);
 
         if(isNaN(quantidadeDeCartas))   {
             alert("O valor informado não é um número.");
@@ -305,7 +306,26 @@ function perguntarQuantidadeDeCartas()   {
         }
     }
 
+    let largura = document.querySelector(".cartas");
+
+    largura.style.width = definirLargura();
+
     gerarQuadroDeCartas();
+}
+
+function definirLargura()   {
+    let controlador, widTH = 500, acrescimo = 200;
+
+    if(quantidadeDeCartas == 4) controlador = 0;
+    else if(quantidadeDeCartas == 6)    controlador = 1;
+    else if(quantidadeDeCartas == 8)    controlador = 2;
+    else if(quantidadeDeCartas == 10)    controlador = 3;
+    else if(quantidadeDeCartas == 12)    controlador = 4;
+    else if(quantidadeDeCartas == 14)    controlador = 5;
+
+    let widthFinal = widTH + (acrescimo * controlador);
+
+    return `${widthFinal}px`;
 }
 
 function gerarQuadroDeCartas()  {

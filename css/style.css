@@ -53,7 +53,7 @@ body    {
     width: 60px;
 }
 
-.quadro__cartas .cartas {
+.cartas {
     display: flex;
 
     flex-wrap: wrap;
@@ -62,7 +62,7 @@ body    {
 
     margin: 30px auto;
 
-    width: 500px;
+    /* width: 500px; */
 }
 
 .carta  {
