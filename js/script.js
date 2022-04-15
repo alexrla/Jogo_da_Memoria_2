@@ -281,7 +281,7 @@ function perguntarQuantidadeDeCartas()   {
         if(isNaN(quantidadeDeCartas))   {
             alert("O valor informado não é um número.");
         }
-        else if(quantidadeDeCartas % 2 != 0)   {
+        else if(quantidadeDeCartas % 2 !== 0)   {
             alert("O valor informado não é par.")
 
             if(quantidadeDeCartas < 4)   {
@@ -315,12 +315,12 @@ function perguntarQuantidadeDeCartas()   {
 function definirLargura()   {
     let controlador, widTH = 500, acrescimo = 200;
 
-    if(quantidadeDeCartas == 4) controlador = 0;
-    else if(quantidadeDeCartas == 6)    controlador = 1;
-    else if(quantidadeDeCartas == 8)    controlador = 2;
-    else if(quantidadeDeCartas == 10)    controlador = 3;
-    else if(quantidadeDeCartas == 12)    controlador = 4;
-    else if(quantidadeDeCartas == 14)    controlador = 5;
+    if(quantidadeDeCartas === 4) controlador = 0;
+    else if(quantidadeDeCartas === 6)    controlador = 1;
+    else if(quantidadeDeCartas === 8)    controlador = 2;
+    else if(quantidadeDeCartas === 10)    controlador = 3;
+    else if(quantidadeDeCartas === 12)    controlador = 4;
+    else if(quantidadeDeCartas === 14)    controlador = 5;
 
     let widthFinal = widTH + (acrescimo * controlador);
 
@@ -374,11 +374,11 @@ function exibirCarta(carta)  {
     // if(jogadas > 0) timer();
 
     setTimeout(() => {
-        if(cartasClicadas.length == 2)  {
+        if(cartasClicadas.length === 2)  {
             let cartaUm = cartasClicadas[0], cartaDois = cartasClicadas[1];
             let cartaUmTitle = titleCartasClicadas[0], cartaDoisTitle = titleCartasClicadas[1];
     
-            if(cartaUmTitle == cartaDoisTitle)    {
+            if(cartaUmTitle === cartaDoisTitle)    {
                 pontos++;
                 pontuacao.innerHTML = pontos;
             }
@@ -410,7 +410,7 @@ function resetarJogo()  {
 }
 
 function verificarFimDeJogo()   {
-    if(pontos == quantidadeDeCartas / 2)    {
+    if(pontos === quantidadeDeCartas / 2)    {
         // clearInterval(time);
 
         alert(`Parabéns! Você ganhou com ${jogadas} jogadas.`);
