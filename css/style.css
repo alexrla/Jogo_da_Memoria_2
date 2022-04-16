@@ -104,3 +104,27 @@ img {
 .virarCarta .front-face {
     transform: rotateY(-180deg);
 }
+
+@media (max-width: 768px) {
+    body {
+      width: 100%;
+    }
+  
+    .cabecalho {
+      text-align: center;
+  
+      width: 100%;
+    }
+  
+    .cartas {
+      align-items: center;
+  
+      flex-direction: column;
+  
+      flex-wrap: nowrap;
+  
+      justify-content: center;
+  
+      max-width: 100%;
+    }
+}
