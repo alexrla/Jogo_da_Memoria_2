@@ -365,11 +365,15 @@ function renderizarQuadroDeCartas() {
 
 function exibirCarta(carta)  {
     if(jogadas === 0) timer();
-    carta.removeAttribute("onclick");
 
-    carta.classList.toggle("virarCarta");
-    cartasClicadas.push(carta);
-    titleCartasClicadas.push(carta.title);
+    if(cartasClicadas.length < 2 && titleCartasClicadas.length < 2) {
+        carta.removeAttribute("onclick");
+        carta.classList.toggle("virarCarta");
+
+        cartasClicadas.push(carta);
+        titleCartasClicadas.push(carta.title);
+    } 
+    else return;
 
     jogadas++;
 
