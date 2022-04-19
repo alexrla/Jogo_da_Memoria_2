@@ -11,262 +11,600 @@ pontuacao.innerHTML = pontos;
 
 const cartas = [
     {
+        nome: "Amond",
+        img: "Amond.jpg"
+    },
+
+    {
+        nome: "Android14",
+        img: "Android14.jpg"
+    },
+
+    {
         nome: "Android16",
-        id: 1,
         img: "Android16.jpg"
     },
 
     {
         nome: "Android17",
-        id: 2,
         img: "Android17.png"
     },
 
     {
         nome: "Android18",
-        id: 3,
         img: "Android18.jpg"
     },
 
     {
         nome: "Android19",
-        id: 4,
         img: "Android19.jpg"
     },
 
     {
         nome: "Android20",
-        id: 5,
         img: "Android20.jpg"
     },
 
     {
+        nome: "Bardock",
+        img: "Bardock.jpg"
+    },
+
+    {
         nome: "Bills",
-        id: 6,
         img: "Bills.jpg"
     },
 
     {
+        nome: "Bojack",
+        img: "Bojack.jpg"
+    },
+
+    {
+        nome: "Bubbles",
+        img: "Bubbles.jpg"
+    },
+
+    {
+        nome: "Bujin",
+        img: "Bujin.jpg"
+    },
+
+    {
         nome: "Bulma1",
-        id: 7,
         img: "Bulma1.jpg"
     },
 
 
     {
         nome: "Bulma2",
-        id: 8,
         img: "Bulma2.jpg"
     },
 
     {
+        nome: "Cell__VersaoFinal",
+        img: "Cell__VersaoFinal.jpg"
+    },
+
+    {
         nome: "Cell",
-        id: 9,
         img: "Cell.jpg"
     },
 
     {
-        nome: "Cell__VersaoFinal",
-        id: 10,
-        img: "Cell__VersaoFinal.jpg"
+        nome: "Chaoz",
+        img: "Chaoz.jpg"
     },
-
 
     {
         nome: "Chichi",
-        id: 11,
         img: "Chichi.jpg"
     },
 
+    {
+        nome: "Cold",
+        img: "Cold.jpg"
+    },
 
     {
         nome: "Dabura",
-        id: 12,
         img: "Dabura.jpg"
     },
 
     {
+        nome: "Dodoria",
+        img: "Dodoria.jpg"
+    },
+
+    {
+        nome: "FantasminhaCamarada",
+        img: "FantasminhaCamarada.jpg"
+    },
+
+    {
+        nome: "Fazendeiro",
+        img: "Fazendeiro.jpg"
+    },
+
+    {
+        nome: "Freeza__FormaDois",
+        img: "Freeza__FormaDois.jpg"
+    },
+
+    {
+        nome: "Freeza__FormaTres",
+        img: "Freeza__FormaTres.jpg"
+    },
+
+    {
+        nome: "Freeza__FormaUm_2",
+        img: "Freeza__FormaUm_2.jpg"
+    },
+
+    {
+        nome: "Freeza__FormaUm",
+        img: "Freeza__FormaUm.jpg"
+    },
+
+    {
         nome: "Freeza",
-        id: 13,
         img: "Freeza.jpg"
     },
 
     {
+        nome: "FreezaDourado",
+        img: "FreezaDourado.jpg"
+    },
+
+    {
+        nome: "Freeza2",
+        img: "Freeza2.jpg"
+    },
+
+    {
+        nome: "Ginyuu",
+        img: "Ginyuu.jpg"
+    },
+
+    {
         nome: "Gohan__SuperSaiyajin",
-        id: 14,
         img: "Gohan__SuperSaiyajin.jpg"
     },
 
     {
         nome: "Gohan__SuperSaiyajin2",
-        id: 15,
         img: "Gohan__SuperSaiyajin2.jpg"
     },
 
 
     {
         nome: "Gohan1",
-        id: 16,
         img: "Gohan1.jpg"
     },
 
     {
         nome: "Gohan2",
-        id: 17,
         img: "Gohan2.jpg"
     },
 
     {
         nome: "Gohan3",
-        id: 18,
         img: "Gohan3.jpg"
     },
 
+    {
+        nome: "Gohan4",
+        img: "Gohan4.jpg"
+    },
+
+    {
+        nome: "Gohan5",
+        img: "Gohan5.jpg"
+    },
 
     {
         nome: "GohanMitico1",
-        id: 19,
         img: "GohanMitico1.jpg"
     },
 
     {
         nome: "GohanMitico2",
-        id: 20,
         img: "GohanMitico1.jpg"
     },
 
     {
-        nome: "Goku",
-        id: 21,
-        img: "Goku.jpg"
+        nome: "Goku__KaiohKen",
+        img: "Goku__Kaiohken.jpg"
+    },
+
+    {
+        nome: "Goku__sagaSaiyajin",
+        img: "Goku__sagaSaiyajin.jpg"
+    },
+
+    {
+        nome: "Goku__SuperSaiyajin",
+        img: "Goku__SuperSaiyajin.jpg"
+    },
+
+    {
+        nome: "Goku__SuperSaiyajin3_2",
+        img: "Goku__SuperSaiyajin3_2.jpg"
+    },
+
+    {
+        nome: "Goku__SuperSaiyajin3_3",
+        img: "Goku__SuperSaiyajin3_3.jpg"
     },
 
     {
         nome: "Goku__SuperSaiyajin3",
-        id: 22,
         img: "Goku__SuperSaiyajin3.jpg"
     },
 
+    {
+        nome: "Goku",
+        img: "Goku.jpg"
+    },
+
+    {
+        nome: "Goku2",
+        img: "Goku2.jpg"
+    },
+
+    {
+        nome: "Goku3",
+        img: "Goku3.jpg"
+    },
+
+    {
+        nome: "Goku4",
+        img: "Goku4.jpg"
+    },
+
+    {
+        nome: "Goku5",
+        img: "Goku5.jpg"
+    },
+
+    {
+        nome: "GokuNormal",
+        img: "GokuNormal.jpg"
+    },
+
+    {
+        nome: "GokuNormal2",
+        img: "GokuNormal2.jpg"
+    },
 
     {
         nome: "Goten",
-        id: 23,
         img: "Goten.jpg"
     },
 
     {
         nome: "GotenksDesnutrido",
-        id: 24,
         img: "GotenksDesnutrido.jpg"
     },
 
     {
+        nome: "Janemba",
+        img: "Janemba.jpg"
+    },
+
+    {
+        nome: "Janemba2",
+        img: "Janemba2.jpg"
+    },
+
+    {
+        nome: "Jiisu",
+        img: "Jiisu.jpg"
+    },
+
+    {
+        nome: "Kaiohshin__Novo",
+        img: "Kaiohshin__Novo.jpg"
+    },
+
+    {
+        nome: "Kaiohshin",
+        img: "Kaiohshin.jpg"
+    },
+
+    {
+        nome: "Kame",
+        img: "Kamejpg"
+    },
+
+    {
+        nome: "KamiSama",
+        img: "KamiSama.jpg"
+    },
+
+    {
+        nome: "Karin",
+        img: "Karin.jpg"
+    },
+
+    {
         nome: "Kuririn",
-        id: 25,
         img: "Kuririn.jpg"
     },
 
     {
+        nome: "KuririnEstiloSaiyajin",
+        img: "KuririnEstiloSaiyajin.jpg"
+    },
+
+    {
+        nome: "Kyiu",
+        img: "Kyiu.jpg"
+    },
+    
+    {
         nome: "MajinBoo__Gordo",
-        id: 26,
         img: "MajinBoo__Gordo.jpg"
     },
 
     {
+        nome: "MajinBoo__magrao",
+        img: "MajinBoo__magrao.jpg"
+    },
+
+    {
+        nome: "MajinBoo__Magro",
+        img: "MajinBoo__Magro.jpg"
+    },
+
+    {
+        nome: "MajinBoo__Malhado",
+        img: "MajinBoo__Malhado.jpg"
+    },
+
+    {
+        nome: "MajinBoo__VersaoFinal",
+        img: "MajinBoo__VersaoFinal.jpg"
+    },
+
+    {
+        nome: "MajinBuu__gordo2",
+        img: "MajinBuu__gordo2.jpg"
+    },
+
+    {
         nome: "MajinVegeta",
-        id: 27,
         img: "MajinVegeta.jpg"
     },
 
     {
+        nome: "MestreKame",
+        img: "MestreKame.jpg"
+    },
+
+    {
+        nome: "MetaFreeza",
+        img: "MetaFreeza.jpg"
+    },
+
+    {
+        nome: "Mez",
+        img: "Mez.jpg"
+    },
+
+    {
         nome: "Nappa",
-        id: 28,
         img: "Nappa.jpg"
     },
 
     {
+        nome: "Neiz",
+        img: "MestreKame.jpg"
+    },
+
+    {
+        nome: "PaiKohan",
+        img: "PaiKohan.jpg"
+    },
+
+    {
         nome: "Piccolo",
-        id: 29,
         img: "Piccolo.jpg"
     },
 
+    {
+        nome: "Piccolo2",
+        img: "Piccolo2.jpg"
+    },
+
+    {
+        nome: "Piccolo3",
+        img: "Piccolo3.jpg"
+    },
+
+    {
+        nome: "Piccolo4",
+        img: "Piccolo4.jpg"
+    },
+
+    {
+        nome: "PuiPui",
+        img: "PuiPui.jpg"
+    },
 
     {
         nome: "Raditz",
-        id: 30,
         img: "Raditz.jpg"
     },
 
     {
+        nome: "ReiVegeta",
+        img: "ReiVegeta.jpg"
+    },
+
+    {
+        nome: "Saibaman",
+        img: "Saibaman.jpg"
+    },
+
+    {
+        nome: "SenhorKaioh",
+        img: "SenhorKaioh.jpg"
+    },
+
+    {
+        nome: "Shenlong",
+        img: "Shenlong.jpg"
+    },
+
+    {
         nome: "Spopovich",
-        id: 31,
         img: "Spopovich.jpg"
     },
 
     {
         nome: "SuperVegetto",
-        id: 32,
         img: "SuperVegetto.jpg"
     },
 
     {
+        nome: "SuperVegetto2",
+        img: "SuperVegetto2.jpg"
+    },
+
+    {
+        nome: "Taales",
+        img: "Taales.jpg"
+    },
+
+    {
         nome: "Tenshinhan",
-        id: 33,
         img: "Tenshinhan.jpg"
     },
 
     {
+        nome: "Tenshinhan2",
+        img: "Tenshinhan2.jpg"
+    },
+
+    {
+        nome: "Tigre",
+        img: "Tigre.jpg"
+    },
+
+    {
+        nome: "Trunks__SagaCell",
+        img: "Trunks__SagaCell.jpg"
+    },
+
+    {
+        nome: "Trunks",
+        img: "Trunks.jpg"
+    },
+
+    {
         nome: "TrunksDoFuturo",
-        id: 34,
         img: "TrunksDoFuturo.jpg"
     },
 
     {
         nome: "Vegeta__SagaBoo",
-        id: 35,
         img: "Vegeta__SagaBoo.jpg"
     },
 
     {
+        nome: "Vegeta__sagaSaiyajin",
+        img: "Vegeta__sagaSaiyajin.jpg"
+    },
+
+    {
         nome: "Vegeta__SuperSaiyajin",
-        id: 36,
         img: "Vegeta__SuperSaiyajin.jpg"
     },
 
     {
+        nome: "Vegeta__SuperSaiyajin2_2",
+        img: "Vegeta__SuperSaiyajin2_2.jpg"
+    },
+
+    {
+        nome: "Vegeta__SuperSaiyajin2_3",
+        img: "Vegeta__SuperSaiyajin2_3.jpg"
+    },
+
+    {
+        nome: "Vegeta__SuperSaiyajin2",
+        img: "Vegeta__SuperSaiyajin2.jpg"
+    },
+
+    {
+        nome: "Vegeta",
+        img: "Vegeta.jpg"
+    },
+
+    {
+        nome: "Vegeta2",
+        img: "Vegeta2.jpg"
+    },
+
+    {
+        nome: "Vegeta3",
+        img: "Vegeta3.jpg"
+    },
+
+    {
+        nome: "VegetaNormal",
+        img: "VegetaNormal.jpg"
+    },
+
+    {
         nome: "Vegetto",
-        id: 37,
         img: "Vegetto.jpg"
     },
 
     {
         nome: "Vegetto2",
-        id: 38,
         img: "Vegetto2.jpg"
     },
 
     {
         nome: "Videl",
-        id: 39,
         img: "Videl.jpg"
     },
 
     {
         nome: "Videl2",
-        id: 40,
         img: "Videl2.jpg"
     },
 
     {
         nome: "Whis",
-        id: 41,
         img: "Whis.jpg"
     },
 
     {
+        nome: "Yajirobe",
+        img: "Yajirobe.jpg"
+    },
+
+    {
         nome: "Yamcha",
-        id: 42,
         img: "Yamcha.jpg"
+    },
+
+    {
+        nome: "Yamu",
+        img: "Yamu.jpg"
+    },
+
+    {
+        nome: "Zarbon",
+        img: "Zarbon.jpg"
+    },
+
+    {
+        nome: "Zarbon2",
+        img: "Zarbon2.jpg"
     }
 ];
 
